@@ -1,0 +1,30 @@
+<!-- Courses area start -->
+<div class="courses-area section-padding40 fix">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="section-tittle text-center mb-55">
+                    <h2>Our featured courses</h2>
+                </div>
+            </div>
+        </div>
+        <div class="courses-actives home_courses">
+            <!-- Single -->
+            <div class="properties pb-20" *ngFor="let item of courses;let i=index">
+                <div class="properties__card">
+                    <div class="properties__img overlay1">
+                        <a href="javascript:void(0)"><img [src]="item.img" height="250" alt="Courses{{i}}"></a>
+                    </div>
+                    <div class="properties__caption">
+                        <p>{{item.category}}</p>
+                        <h3><a [routerLink]="['/courses',item.category]">{{item.title}}</a></h3>
+                        <p>{{item.disc}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single -->
+        </div>
+        <a routerLink="/courses" class="border-btn border-btn2">Find out more</a>
+    </div>
+</div>
+<!-- Courses area End -->

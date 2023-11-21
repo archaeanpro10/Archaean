@@ -1,0 +1,58 @@
+<!--? slider Area Start-->
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">Our courses</h1>
+                            <!-- breadcrumb Start-->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/courses">Courses</a></li>
+                                </ol>
+                            </nav>
+                            <!-- breadcrumb End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses area start -->
+<div class="courses-area section-padding40 fix">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="section-tittle text-center mb-55">
+                    <h2>Our featured courses</h2>
+                    <app-course-filter (passFilterVal)="receivedFilterVal($event)"></app-course-filter>
+                </div>
+            </div>
+        </div>
+        <div class="main_courses row">
+            <!-- Single -->
+            <ng-container *ngFor="let item of courses;let i=index">
+                <div class="single_course col-lg-4 col-md-6 col-12 pb-20" *ngIf="filter_val === 'All' || item.category === filter_val || item.category === category">
+                    <div class="properties__card">
+                        <div class="properties__img overlay1">
+                            <a [routerLink]="['/courses','course-details', item.id]"><img [src]="item.img" height="250" alt="Courses{{i}}"></a>
+                        </div>
+                        <div class="properties__caption">
+                            <p class="main_courses_para1">{{item.category}}</p>
+                            <h3><a [routerLink]="['/courses','course-details', item.id]">{{item.title}}</a></h3>
+                            <p style="height: 90px; overflow: hidden;" [innerHTML]="item.disc"></p>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <!-- Single -->
+        </div>
+    </div>
+</div>
+<!-- Courses area End -->

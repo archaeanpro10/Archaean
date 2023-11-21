@@ -1,0 +1,20 @@
+<div class="course_filter">
+    <div class="filter h5 mx-auto" style="width: fit-content;">
+        <div class="form-group">
+            <input type="radio" name="course" id="all" class="form-radio-input mx-3" value="All" [(ngModel)]="default_course" (change)="OnChange()">
+            <label for="all" class="form-label">All</label>
+
+            <input type="radio" name="course" id="design" class="form-radio-input mx-3" value="Design" [(ngModel)]="default_course" (change)="OnChange()">
+            <label for="design" class="form-label">Design</label>
+
+            <input type="radio" name="course" id="development" class="form-radio-input mx-3" value="Development" [(ngModel)]="default_course" (change)="OnChange()">
+            <label for="development" class="form-label">Development</label>
+
+            <input type="radio" name="course" id="architecture" class="form-radio-input mx-3" value="Architecture" [(ngModel)]="default_course" (change)="OnChange()">
+            <label for="architecture" class="form-label">Architecture</label>
+
+            <input type="radio" name="course" id="graphics" class="form-radio-input mx-3" value="Graphics" [(ngModel)]="default_course" (change)="OnChange()">
+            <label for="graphics" class="form-label">Graphics</label>
+        </div>
+    </div>
+</div>
