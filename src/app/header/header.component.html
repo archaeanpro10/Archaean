@@ -22,34 +22,31 @@
                                     <a class="navbar-brand d-block d-lg-none" routerLink="" id="logo"><img [src]="logoImg1"
                                         alt="Archaean Pro Design"></a>
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                                     </button>
                                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                         <ul class="navbar-nav">
-                                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                            <li><a class="nav-link active"
                                                     routerLink="">Home</a></li>
-                                            <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
-                                            <li class="nav-item dropdown">
+                                            <li><a class="nav-link" routerLink="/about">About</a></li>
+                                            <li class="dropdown">
                                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
+                                                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
                                                     Design
                                                 </a>
-                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',4]">UI/UX</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',1]">Web Design</a></li>
                                                 </ul>
                                             </li>
 
-                                            <li class="nav-item dropdown">
+                                            <li class="dropdown">
                                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
+                                                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
                                                     Development
                                                 </a>
-                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',3]">Web Development</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',12]"> MEAN Stack</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',13]"> MERN Stack</a></li>
@@ -59,13 +56,12 @@
                                                 </ul>
                                             </li>
 
-                                            <li class="nav-item dropdown">
+                                            <li class="dropdown">
                                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
+                                                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
                                                     Architecture
                                                 </a>
-                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',5]">AutoCAD</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',15]">Revit</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',16]">3Ds Max</a></li>
@@ -77,13 +73,12 @@
                                                 </ul>
                                             </li>
 
-                                            <li class="nav-item dropdown">
+                                            <li class=" dropdown">
                                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
+                                                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
                                                     Graphics
                                                 </a>
-                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',6]">Photoshop</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',19]">Coreldraw</a></li>
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',20]">Illustrator</a></li>
@@ -92,7 +87,7 @@
                                                     <li><a class="dropdown-item" [routerLink]="['/courses','course-details',23]">After Effect</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" routerLink="/contact">Contact</a></li>
+                                            <li><a class="nav-link" routerLink="/contact">Contact</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -112,112 +107,3 @@
 <!-- header Start end -->
 
 <app-popupform></app-popupform>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="menu-wrapper d-flex align-items-center justify-content-end">
-    
-    <div class="main-menu d-none d-lg-block">
-        <nav>
-            <ul id="navigation">
-                <li class="active"><a routerLink="">Home</a></li>
-                <li><a routerLink="/about">About</a></li>
-                <li><a routerLink="/courses">Courses</a>
-                    <ul class="submenu">
-                        <li><a href="javascript:void(0)">Design</a>
-                            <ul class="submenu submenu_2">
-                                <li><a
-                                        [routerLink]="['/courses','course-details',1]">UI/UX</a>
-                                </li>
-                                <li><a [routerLink]="['/courses','course-details',4]"> Web
-                                        Designing</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="javascript:void(0)">Development</a>
-                            <ul class="submenu submenu_2">
-                                <li><a [routerLink]="['/courses','course-details',3]">Web
-                                        Development</a></li>
-                                <li><a [routerLink]="['/courses','course-details',1]"> MEAN
-                                        Stack</a></li>
-                                <li><a [routerLink]="['/courses','course-details',1]"> MERN
-                                        Stack</a></li>
-                                <li><a [routerLink]="['/courses','course-details',1]"> Full
-                                        Stack</a></li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',9]">Python</a>
-                                </li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',10]">C/C++</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="javascript:void(0)">Architecture</a>
-                            <ul class="submenu submenu_2">
-                                <li><a
-                                        [routerLink]="['/courses','course-details',5]">AutoCAD</a>
-                                </li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',5]">Revit</a>
-                                </li>
-                                <li><a [routerLink]="['/courses','course-details',5]">3Ds
-                                        Max</a></li>
-                                <li><a [routerLink]="['/courses','course-details',5]">Sketch
-                                        Up</a></li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',1]">Lumnion</a>
-                                </li>
-                                <li><a [routerLink]="['/courses','course-details',8]">Staad
-                                        Pro</a></li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',7]">Etabs</a>
-                                </li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',5]">Maya</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="javascript:void(0)">Graphics</a>
-                            <ul class="submenu submenu_2">
-                                <li><a
-                                        [routerLink]="['/courses','course-details',6]">Photoshop</a>
-                                </li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',6]">Coreldraw</a>
-                                </li>
-                                <li><a
-                                        [routerLink]="['/courses','course-details',6]">Illustrator</a>
-                                </li>
-                                <li><a [routerLink]="['/courses','course-details',6]">In
-                                        Design</a></li>
-                                <li><a [routerLink]="['/courses','course-details',6]">Premiere
-                                        Pro</a></li>
-                                <li><a [routerLink]="['/courses','course-details',6]">After
-                                        Effect</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="javascript:void(0)">Blog</a>
-
-                </li>
-                <li><a routerLink="/contact">Contact</a></li>
-                
-                <li class="button-header margin-left "><a routerLink="" class="btn">Join</a>
-                </li>
-                <li class="button-header"><a routerLink="/login" class="btn btn3">Log in</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div> -->

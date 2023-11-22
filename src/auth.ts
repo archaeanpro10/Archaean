@@ -1,10 +1,9 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyDZtHVUA8YZO5viWDDL_y0pa_O1nlnr5JQ",
-  authDomain: "archaean-pro.firebaseapp.com",
-  databaseURL: "https://archaean-pro-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "archaean-pro",
-  storageBucket: "archaean-pro.appspot.com",
-  messagingSenderId: "270072219040",
-  appId: "1:270072219040:web:1c2d008e582999236450c5",
-  measurementId: "G-63C9Z9F983"
+  apiKey: "AIzaSyBuKwgaSyDrcFDXEDhoL4P2NppoyVTu4dg",
+  authDomain: "archaean-pro1.firebaseapp.com",
+  projectId: "archaean-pro1",
+  storageBucket: "archaean-pro1.appspot.com",
+  messagingSenderId: "205021765776",
+  appId: "1:205021765776:web:068ce7139f9d0ca39df815",
+  measurementId: "G-QX5P7KXS5C"
 };

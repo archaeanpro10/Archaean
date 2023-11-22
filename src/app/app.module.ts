@@ -28,6 +28,8 @@ import { CourseFilterComponent } from './course-filter/course-filter.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { PopupformComponent } from './popupform/popupform.component';
+import { AngularFireModule } from "@angular/fire/compat"
+import { firebaseConfig } from 'src/auth';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { PopupformComponent } from './popupform/popupform.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [CourseServices],
   bootstrap: [AppComponent]
