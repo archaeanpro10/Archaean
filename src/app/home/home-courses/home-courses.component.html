@@ -1,30 +1,122 @@
 <!-- Courses area start -->
 <div class="courses-area section-padding40 fix">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-                <div class="section-tittle text-center mb-55">
-                    <h2>Our featured courses</h2>
-                </div>
-            </div>
-        </div>
-        <div class="courses-actives home_courses">
-            <!-- Single -->
-            <div class="properties pb-20" *ngFor="let item of courses;let i=index">
-                <div class="properties__card">
-                    <div class="properties__img overlay1">
-                        <a href="javascript:void(0)"><img [src]="item.img" height="250" alt="Courses{{i}}"></a>
-                    </div>
-                    <div class="properties__caption">
-                        <p>{{item.category}}</p>
-                        <h3><a [routerLink]="['/courses',item.category]">{{item.title}}</a></h3>
-                        <p>{{item.disc}}</p>
+    <div class="container p-lg-5 p-2" style="background: #f8f8f8;">
+        <div>
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="section-tittle text-center">
+                        <h2>Our featured courses</h2>
                     </div>
                 </div>
             </div>
-            <!-- Single -->
+            <div class="main_courses row gap-5 justify-content-between p-0 m-0">
+                <!-- Single -->
+                <div class="col-12 text-center my-5">
+                    <h3 style="color:#ed1d26;">Web Designing Courses</h3>
+                </div>
+                <ng-container *ngFor="let item of courses;let i=index">
+                    <div class="single_course col-lg-4 col-md-6 col-12 pb-20 mt-20" *ngIf="item.category === 'Design'">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a [routerLink]="['/courses','course-details', item.id]"><img [src]="item.img"
+                                        height="250" alt="Courses{{i}}"></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p class="main_courses_para1">{{item.category}}</p>
+                                <h3><a [routerLink]="['/courses','course-details', item.id]">{{item.title}}</a></h3>
+                                <p style="height: 90px; overflow: hidden;" [innerHTML]="item.disc"></p>
+                            </div>
+                            <div class="btns pb-2 px-2" style="width: fit-content; margin: auto;">
+                                <a href="tel:+91 97546 71277" class="btn mx-2">Call</a>
+                                <a [routerLink]="['/courses','course-details', item.id]" class="btn mx-2">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!-- Single -->
+
+
+                <!-- Single -->
+                <div class="col-12 text-center my-5">
+                    <h3 style="color:#ed1d26;">Web Development Courses</h3>
+                </div>
+                <ng-container *ngFor="let item of courses;let i=index">
+                    <div class="single_course col-lg-4 col-md-6 col-12 pb-20 mt-20"
+                        *ngIf="item.category === 'Development'">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a [routerLink]="['/courses','course-details', item.id]"><img [src]="item.img"
+                                        height="250" alt="Courses{{i}}"></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p class="main_courses_para1">{{item.category}}</p>
+                                <h3><a [routerLink]="['/courses','course-details', item.id]">{{item.title}}</a></h3>
+                                <p style="height: 90px; overflow: hidden;" [innerHTML]="item.disc"></p>
+                            </div>
+                            <div class="btns pb-2 px-2" style="width: fit-content; margin: auto;">
+                                <a href="tel:+91 97546 71277" class="btn mx-2">Call</a>
+                                <a [routerLink]="['/courses','course-details', item.id]" class="btn mx-2">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!-- Single -->
+
+
+                <!-- Single -->
+                <div class="col-12 text-center my-5">
+                    <h3 style="color:#ed1d26;">Architecture Courses</h3>
+                </div>
+                <ng-container *ngFor="let item of courses;let i=index">
+                    <div class="single_course col-lg-4 col-md-6 col-12 pb-20 mt-20"
+                        *ngIf="item.category === 'Architecture'">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a [routerLink]="['/courses','course-details', item.id]"><img [src]="item.img"
+                                        height="250" alt="Courses{{i}}"></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p class="main_courses_para1">{{item.category}}</p>
+                                <h3><a [routerLink]="['/courses','course-details', item.id]">{{item.title}}</a></h3>
+                                <p style="height: 90px; overflow: hidden;" [innerHTML]="item.disc"></p>
+                            </div>
+                            <div class="btns pb-2 px-2" style="width: fit-content; margin: auto;">
+                                <a href="tel:+919329258015" class="btn mx-2">Call</a>
+                                <a [routerLink]="['/courses','course-details', item.id]" class="btn mx-2">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!-- Single -->
+
+
+                <!-- Single -->
+                <div class="col-12 text-center my-5">
+                    <h3 style="color:#ed1d26;">Graphics Courses</h3>
+                </div>
+                <ng-container *ngFor="let item of courses;let i=index">
+                    <div class="single_course col-lg-4 col-md-6 col-12 pb-20 mt-20"
+                        *ngIf="item.category === 'Graphics'">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a [routerLink]="['/courses','course-details', item.id]"><img [src]="item.img"
+                                        height="250" alt="Courses{{i}}"></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p class="main_courses_para1">{{item.category}}</p>
+                                <h3><a [routerLink]="['/courses','course-details', item.id]">{{item.title}}</a></h3>
+                                <p style="height: 90px; overflow: hidden;" [innerHTML]="item.disc"></p>
+                            </div>
+                            <div class="btns pb-2 px-2" style="width: fit-content; margin: auto;">
+                                <a href="tel:+91 97546 71277" class="btn mx-2">Call</a>
+                                <a [routerLink]="['/courses','course-details', item.id]" class="btn mx-2">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!-- Single -->
+            </div>
         </div>
-        <a routerLink="/courses" class="border-btn border-btn2">Find out more</a>
     </div>
 </div>
 <!-- Courses area End -->
