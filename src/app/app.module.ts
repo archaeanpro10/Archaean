@@ -30,6 +30,7 @@ import { RegisterComponent } from './register/register.component';
 import { PopupformComponent } from './popupform/popupform.component';
 import { AngularFireModule } from "@angular/fire/compat"
 import { firebaseConfig } from 'src/auth';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { firebaseConfig } from 'src/auth';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    HttpClientModule
   ],
   providers: [CourseServices],
   bootstrap: [AppComponent]
