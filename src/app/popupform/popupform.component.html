@@ -1,24 +1,32 @@
 <section class="enquiry_form_popup">
     <div class="container">
         <div class="form" id="form">
-            <form class="border p-5 w-50 mx-auto my-5">
+            <form class="border p-5 w-50 mx-auto my-5" (ngSubmit)="onSubmit(form.value)" #form="ngForm">
                 <div class="form-group mb-2">
                     <label for="Name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="Name" placeholder="Name" required />
+                    <input type="text" class="form-control" name="name" id="Name" placeholder="Name" required ngModel/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="Email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="Email" placeholder="Email" required />
+                    <input type="email" class="form-control" name="email" id="Email" placeholder="Email" required ngModel/>
                 </div>
                 <div class="form-group mb-2">
-                    <label for="Phome" class="form-label">Phome</label>
-                    <input type="email" class="form-control" id="Phome" placeholder="Phome" required />
+                    <label for="Phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" name="phone" id="Phone" placeholder="Phone" required ngModel/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="Subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="Subject" placeholder="Subject"
+                        required ngModel/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="Message" class="form-label">Message</label>
-                    <textarea class="form-control" id="Message" cols="30" rows="3"></textarea>
+                    <textarea class="form-control" name="message" id="Message" cols="30" rows="3" required ngModel></textarea>
                 </div>
-                <button class="btn hero-btn" style="padding: 20px 25px !important;">Submit</button>
+                <div class="form-group mb-2">
+                    <input type="submit" class="btn hero-btn" [disabled]="!form.valid">
+                    <p class="alert alert-success" role="alert" [class.d-none]="!msg">{{msg}}</p>
+                </div>
                 <i class="fa fa-times" id="form_close" onclick="open_close_form(this)"></i>
             </form>
         </div>

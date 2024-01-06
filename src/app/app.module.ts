@@ -31,6 +31,7 @@ import { PopupformComponent } from './popupform/popupform.component';
 import { AngularFireModule } from "@angular/fire/compat"
 import { firebaseConfig } from 'src/auth';
 import { HttpClientModule } from '@angular/common/http'
+import { ContactFormService } from './services/contactform.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { HttpClientModule } from '@angular/common/http'
     EnrollComponent,
     CourseFilterComponent,
     RegisterComponent,
-    PopupformComponent
+    PopupformComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +67,7 @@ import { HttpClientModule } from '@angular/common/http'
     AngularFireModule.initializeApp(firebaseConfig),
     HttpClientModule
   ],
-  providers: [CourseServices],
+  providers: [CourseServices, ContactFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

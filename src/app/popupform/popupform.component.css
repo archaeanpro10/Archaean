@@ -18,10 +18,6 @@
     position: relative;
 }
 
-.enquiry_form_popup form input{
-    background: transparent;
-}
-
 #form_close{
     position: absolute;
     top: 15px;
