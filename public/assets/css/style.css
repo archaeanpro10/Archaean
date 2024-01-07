@@ -4869,7 +4869,7 @@ hr {
 
 .blog_area a:hover,
 .blog_area a :hover {
-    background: -webkit-linear-gradient(131deg, #C86FFF 0%, #C86FFF 99%);
+    background: -webkit-linear-gradient(131deg, #ed1d26 0%, #ed1d26 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
@@ -4877,7 +4877,6 @@ hr {
 }
 
 .single-blog {
-    overflow: hidden;
     margin-bottom: 30px
 }
 
