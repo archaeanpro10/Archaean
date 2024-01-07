@@ -12,7 +12,9 @@ export class CourseDetailsComponent {
   constructor(private course: CourseServices, private router: ActivatedRoute) { }
 
   single_course_detials: any = {};
-  courseID: number = 0;
+  previous_detials: any = {};
+  next_detials: any = {};
+  courseID: any = 0;
   filteredName:any = '';
   allCourseName:Course[] = [];
 
@@ -21,7 +23,10 @@ export class CourseDetailsComponent {
     // this.router.params.subscribe(val=>this.courseID = val['id']);
     this.router.params.subscribe(val=>{
       this.courseID = val['id'];
+      this.courseID = parseInt(this.courseID, 10);
       this.single_course_detials = this.course.course.find(c => c.id == this.courseID);
+      this.previous_detials = this.course.course.find(c => c.id == this.courseID-1);
+      this.next_detials = this.course.course.find(c => c.id == this.courseID+1);
     });
     this.allCourseName = this.course.course;
   }
