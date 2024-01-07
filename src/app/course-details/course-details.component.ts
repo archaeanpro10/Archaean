@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CourseServices } from '../services/course.service';
 import { ActivatedRoute } from '@angular/router';
+import { Course } from '../services/course';
 
 @Component({
   selector: 'app-course-details',
@@ -12,6 +13,8 @@ export class CourseDetailsComponent {
 
   single_course_detials: any = {};
   courseID: number = 0;
+  filteredName:any = '';
+  allCourseName:Course[] = [];
 
   ngOnInit() {
     // this.courseID = this.router.snapshot.params['id'];
@@ -20,7 +23,12 @@ export class CourseDetailsComponent {
       this.courseID = val['id'];
       this.single_course_detials = this.course.course.find(c => c.id == this.courseID);
     });
-    // this.single_course_detials = this.course.course.find(c => c.id == this.courseID);
-    // this.single_course_detials = this.course.course[this.courseID-1];
+    this.allCourseName = this.course.course;
+  }
+
+  onInputChange(data:any){
+    // console.log(data.target.value)
+    this.filteredName = this.course.course.filter((val)=>(val.title.toLowerCase().includes(data.target.value.toLowerCase())) || (val.category.toLowerCase().includes(data.target.value.toLowerCase())));
+    console.log(this.filteredName);
   }
 }

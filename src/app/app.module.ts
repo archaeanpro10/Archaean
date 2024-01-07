@@ -32,6 +32,7 @@ import { AngularFireModule } from "@angular/fire/compat"
 import { firebaseConfig } from 'src/auth';
 import { HttpClientModule } from '@angular/common/http'
 import { ContactFormService } from './services/contactform.service';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ContactFormService } from './services/contactform.service';
     CourseFilterComponent,
     RegisterComponent,
     PopupformComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { EnrollComponent } from './enroll/enroll.component';
 import { RegisterComponent } from './register/register.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {path:'', component : HomeComponent},
@@ -24,11 +25,16 @@ const routes: Routes = [
   {path:'enroll', component : EnrollComponent},
   {path:'login', component : LoginComponent},
   {path:'register', component : RegisterComponent},
+  {path:'privacy-policy', component : PrivacyPolicyComponent},
   {path:'**', component : NotFoundComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top',
+    anchorScrolling: 'enabled',
+    
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

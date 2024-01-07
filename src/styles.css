@@ -33,32 +33,44 @@
     margin: 20px 0 !important;
 }
 
-.home_courses .properties__caption P:first-child{
+.home_courses .properties__caption P:first-child {
     color: #ed1d26;
 }
 
-.main_courses .properties__caption .main_courses_para1{
+.main_courses .properties__caption .main_courses_para1 {
     color: #ed1d26;
 }
 
-.section-tittle h2{
+.section-tittle h2 {
     color: #4255A4;
     text-transform: capitalize;
 }
 
-.team-area .single-cat .cat-cap h5>a{
+.team-area .single-cat .cat-cap h5>a {
     color: #ed1d26;
 }
 
-.footer-copy-right a:hover{
+.footer-copy-right a:hover {
     color: #ed1d26;
 }
 
-.courses-area .properties__caption h3 a:hover{
+.courses-area .properties__caption h3 a:hover {
     color: #ed1d26;
 
 }
 
-.error{
+.error {
     color: #ed1d26;
+}
+
+.whatsapp_icon span {
+    font-size: 40px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100;
+    color: #fff;
+    background: #25D366;
+    padding: 12px 15px;
+    border-radius: 100%;
 }

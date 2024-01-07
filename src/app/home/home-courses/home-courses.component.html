@@ -15,7 +15,7 @@
                     <h3 style="color:#ed1d26;">Web Designing Courses</h3>
                 </div>
                 <ng-container *ngFor="let item of courses;let i=index">
-                    <div class="single_course col-lg-4 col-md-6 col-12 pb-20 mt-20" *ngIf="item.category === 'Design'">
+                    <div class="single_course col-lg-6 col-md-6 col-12 pb-20 mt-20" *ngIf="item.category === 'Design'">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
                                 <a [routerLink]="['/courses','course-details', item.id]"><img [src]="item.img"
